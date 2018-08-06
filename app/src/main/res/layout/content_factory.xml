@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.zhouyuxin.ttfapp.FactoryActivity"
+    tools:showIn="@layout/app_bar_factory">
+
+    <Button
+        android:id="@+id/button_theme"
+        android:layout_width="341dp"
+        android:layout_height="268dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/find_factory_button_shape"
+        android:drawableTint="#691311"
+        android:drawableTop="@drawable/theme"
+        android:gravity="bottom|center_horizontal"
+        android:text="主題性"
+        android:textColor="#3d0b0a"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_place"
+        android:layout_width="341dp"
+        android:layout_height="268dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/find_factory_button_shape"
+        android:drawableTint="#691311"
+        android:drawableTop="@drawable/area"
+        android:gravity="bottom|center_horizontal"
+        android:text="地區性"
+        android:textColor="#3d0b0a"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_theme" />
+</android.support.constraint.ConstraintLayout>

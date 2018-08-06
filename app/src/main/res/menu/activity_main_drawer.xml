@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_member"
+        android:icon="@drawable/nav_member"
+        android:iconTint="@color/colorBackground"
+        android:title="會員資料"
+        tools:icon="@drawable/nav_member"
+        tools:iconTint="@color/colorBackground" />
+    <item
+        android:id="@+id/nav_findfactory"
+        android:icon="@drawable/nav_findfactory"
+        android:title="找工廠" />
+    <item
+        android:id="@+id/nav_nearfactory"
+        android:icon="@drawable/nav_nearfactory"
+        android:title="附近工廠" />
+    <item
+        android:id="@+id/nav_store"
+        android:icon="@drawable/nav_store"
+        android:title="線上商城" />
+    <item
+        android:id="@+id/nav_newinformation"
+        android:icon="@drawable/nav_newinformation"
+        android:title="最新資訊" />
+    <item
+        android:id="@+id/nav_bingo"
+        android:icon="@drawable/nav_bingo"
+        android:title="集點活動" />
+    <item
+        android:id="@+id/nav_album"
+        android:icon="@drawable/nav_album"
+        android:title="分享相簿" />
+    <item
+        android:id="@+id/nav_pockage"
+        android:icon="@drawable/nav_pockage"
+        android:title="我的收藏" />
+    <item
+        android:id="@+id/nav_set"
+        android:icon="@drawable/nav_set"
+        android:title="通知設定" />
+    <item
+        android:id="@+id/nav_aboutme"
+        android:icon="@drawable/nav_aboutme"
+        android:title="關於我們" />
+    <!--
+    <group android:checkableBehavior="single">
+    </group>
+    -->
+</menu>

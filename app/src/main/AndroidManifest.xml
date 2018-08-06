@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zhouyuxin.ttfapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FactoryActivity"
+            android:label="@string/title_activity_factory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MemberActivity"
+            android:label="@string/title_activity_member"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewinformationActivity"
+            android:label="@string/title_activity_newinformation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BingoActivity"
+            android:label="@string/title_activity_bingo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NearFactoryActivity"
+            android:label="@string/title_activity_near_factory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AlbumActivity"
+            android:label="@string/title_activity_album"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StoreActivity"
+            android:label="@string/title_activity_store"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PockageActivity"
+            android:label="@string/title_activity_pockage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SetActivity"
+            android:label="@string/title_activity_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutmeActivity"
+            android:label="@string/title_activity_aboutme"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ThemeActivity"
+            android:label="@string/title_activity_theme"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AreaActivity"
+            android:label="@string/title_activity_area"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+</manifest>
