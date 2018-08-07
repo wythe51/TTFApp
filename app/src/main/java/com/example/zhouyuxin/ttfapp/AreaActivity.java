@@ -1,6 +1,8 @@
 package com.example.zhouyuxin.ttfapp;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,9 +18,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.zhouyuxin.ttfapp.R;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.maps.android.ui.IconGenerator;
+
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AreaActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +52,29 @@ public class AreaActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap map) {
+        LatLng centerTaiwan = new LatLng(23.65, 120.7);
+        float zoomLevel = (float)7.8;
+        map.getUiSettings().setScrollGesturesEnabled(false);
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        map.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.map_style));
+        List<County> countyList = new ArrayList<County>();
+        countyList.add(new County(new LatLng(25.0928027,121.5395171), "台北"));
+        for(County county : countyList){
+            IconGenerator icg = new IconGenerator(this);
+            map.addMarker(new MarkerOptions()
+                    .icon(BitmapDescriptorFactory.fromBitmap(icg.makeIcon(county.getLabel())))
+                    .position(county.getLocation())
+                    .anchor(icg.getAnchorU(), icg.getAnchorV())
+            );
+        }
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(centerTaiwan, zoomLevel));
     }
 
     @Override

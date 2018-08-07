@@ -19,4 +19,5 @@
     <string name="title_activity_aboutme">AboutmeActivity</string>
     <string name="title_activity_theme">ThemeActivity</string>
     <string name="title_activity_area">AreaActivity</string>
+    <string name="title_activity_maps">地區性</string>
 </resources>
